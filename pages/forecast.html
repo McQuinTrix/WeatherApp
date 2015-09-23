@@ -1,0 +1,11 @@
+<h1 ng-cloak> Weather of {{city}}</h1>
+<hr/>
+Days: <a href="#/forecast/2" ng-class="{'bg-primary': days == '2'}">2</a> | <a href="#/forecast/5" ng-class="{'bg-primary': days == '5'}" >5</a>
+<hr/>
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+            <weather-rep w="w" convert-date="convertToDate(dateVar)" convert-fh="convertToFh(tempVar)" date-format="MMM d, y"></weather-rep>
+        </div>
+    </div>
+</div>
